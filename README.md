@@ -1,2 +1,9 @@
-# resume-overhaul
-This is repository to overhaul my current resume website, using modern Frameworks.
+# Resume Overhaul Project
+
+Before Cloning or starting anything, I just wanted to write down some things I wanted to try using this time around.
+
+Frameworks:
+
+- Vue
+- Bootstrap (?)
+- PyScript
