@@ -123,7 +123,7 @@ export default {
 }
 
 #other #navbar {
-  width: 280px;
+  width: 100%;
 }
 
 .mobileImg {

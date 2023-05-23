@@ -15,3 +15,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+#main {
+  color: white;
+}
