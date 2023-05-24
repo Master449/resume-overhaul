@@ -2,8 +2,27 @@ html {
   height: 100vh;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  min-height: 100vh;
   background-color: #323b44;
+  color: white;
+  margin: 0;
+}
+
+#flex-wrapper {
+  display: inline-flex;
+  justify-content : space-evenly;
+}
+
+.card {
+  background-color: #212529;
   color: white;
 }

@@ -13,4 +13,4 @@ const edu = createApp(Education)
 mainPage.use(router)
 
 navbar.mount('#nav')
-edu.mount('#education')
+edu.mount('#content')

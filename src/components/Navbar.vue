@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="container" id="mobile" v-if="isMobile">
+  <div id="mobile" v-if="isMobile">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -57,7 +57,7 @@ export default {
       </div>
     </nav>
   </div>
-  <div class="container" id="Nav-Not-Mobile" v-else>
+  <div id="Nav-Not-Mobile" v-else>
     <div id="navbar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
       <img src="/img/avatar.png" />
       <hr>
@@ -108,11 +108,7 @@ export default {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
-  height: 100vh;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  min-height: 100vh;
 }
 
 #Nav-Not-Mobile .links li {
@@ -130,19 +126,15 @@ export default {
   font-size: 20px;
 }
 
-#Nav-Not-Mobile #navbar {
-  width: 100%;
-}
-
 .mobileImg {
   height: 5%;
   margin: 0;
 }
 
 #mobile {
-  position: absolute;
   margin: 0;
   padding: 0;
   z-index: 2;
+  position: absolute;
 }
 </style>

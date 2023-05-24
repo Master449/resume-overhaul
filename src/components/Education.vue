@@ -47,7 +47,7 @@ export default {
 </script>
 
 <template>
-    <div id="Non-Mobile" class="container" v-if="!isMobile">
+    <div id="Non-Mobile" v-if="!isMobile">
         <h1>Education</h1>
         <hr />
         <div class="card mb-4" v-for="school in Education">
@@ -65,7 +65,7 @@ export default {
             </div>
         </div>
     </div>
-    <div id="Mobile" class="container" v-else>
+    <div id="Mobile" v-else>
         <h1>Education</h1>
         <hr />
         <div class="card mb-4" v-for="school in Education">
@@ -87,12 +87,16 @@ export default {
 </template>
 
 <style scoped>
-.card {
-    background-color: #212529;
-}
-
 hr {
     color: white;
     border: 2px solid white;
+}
+
+#Non-Mobile {
+    margin: 2% 2% 0 5%;
+}
+
+#Mobile {
+    margin: 10% 0 0 0;
 }
 </style>
