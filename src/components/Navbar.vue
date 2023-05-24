@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <main id="mobile" v-if="isMobile">
+  <div class="container" id="mobile" v-if="isMobile">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -56,14 +56,14 @@ export default {
         </div>
       </div>
     </nav>
-  </main>
-  <main id="other" v-else>
+  </div>
+  <div class="container" id="Nav-Not-Mobile" v-else>
     <div id="navbar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
       <img src="/img/avatar.png" />
       <hr>
       <h3 class="text-center"><strong>David Flowers II</strong></h3>
-      <p class="text-center m-0"><i>Software Engineer</i></p>
-      <p class="text-center m-0"><i>Chicagoland Area</i></p>
+      <p class="text-center m-1"><i>Computer Science Undergrad</i></p>
+      <p class="text-center m-2"><i>dsflowers2000@gmail.com</i></p>
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
@@ -100,11 +100,17 @@ export default {
               class="fa-brands fa-twitter"></i></a></li>
       </ul>
     </div>
-  </main>
+  </div>
 </template>
 
 <style>
-#other .links li {
+#Nav-Not-Mobile {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#Nav-Not-Mobile .links li {
   border: none;
   width: 100%;
   background-color: #212529;
@@ -112,20 +118,26 @@ export default {
   font-size: 24px;
 }
 
-#other .links li a {
+#Nav-Not-Mobile ul li a {
   color: #FFFF;
   width: 100%;
   height: 100%;
-}
-
-#other a {
   font-size: 20px;
 }
 
-#other #navbar {
+#Nav-Not-Mobile #navbar {
   width: 100%;
 }
 
 .mobileImg {
   height: 5%;
-}</style>
+  margin: 0;
+}
+
+#mobile {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+</style>
