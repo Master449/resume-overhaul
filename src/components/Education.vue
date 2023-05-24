@@ -53,7 +53,7 @@ export default {
         <div class="card mb-4" v-for="school in Education">
             <div class="row g-0">
                 <div class="col-md-2">
-                    <img :src="school.logo" class="img-fluid rounded-start" alt="Logo">
+                    <img :src="school.logo" class="img-fluid rounded-start" :alt="school.name">
                 </div>
                 <div class="col">
                     <div class="card-body">
@@ -69,13 +69,14 @@ export default {
         <h1>Education</h1>
         <hr />
         <div class="card mb-4" v-for="school in Education">
-            <div class="row g-0">
+            <div class="row g-2">
                 <div class="col-md-2">
-                    <img :src="school.logo" class="img-fluid rounded-start" alt="Logo">
+                    <img :src="school.logo" class="img-fluid rounded-start" :alt="school.name">
                 </div>
                 <div class="col">
                     <div class="card-body">
-                        <h5 class="card-title"><strong>{{ school.name }} - {{ school.study }}</strong></h5>
+                        <h5 class="card-title"><strong>{{ school.name }}</strong></h5>
+                        <h4 class="card-text">{{ school.study }}</h4>
                         <p class="card-text">{{ school.start }} - {{ school.end }}</p>
                         <p class="card-text">{{ school.info }}</p>
                     </div>
@@ -93,9 +94,5 @@ export default {
 hr {
     color: white;
     border: 2px solid white;
-}
-
-small .text-muted {
-    color: white;
 }
 </style>

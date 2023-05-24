@@ -107,7 +107,12 @@ export default {
 #Nav-Not-Mobile {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
   height: 100vh;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 #Nav-Not-Mobile .links li {
