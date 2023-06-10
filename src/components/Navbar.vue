@@ -104,11 +104,16 @@ export default {
 </template>
 
 <style>
+#navbar {
+  height: 100%;
+  width: 100%;
+}
+
 #Nav-Not-Mobile {
   margin: 0;
   padding: 0;
-  display: flex;
   min-height: 100vh;
+  height: 100vh;
 }
 
 #Nav-Not-Mobile .links li {
@@ -136,5 +141,6 @@ export default {
   padding: 0;
   z-index: 2;
   position: absolute;
+  width: 100%;
 }
 </style>

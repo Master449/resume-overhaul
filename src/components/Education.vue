@@ -91,12 +91,4 @@ hr {
     color: white;
     border: 2px solid white;
 }
-
-#Non-Mobile {
-    margin: 2% 2% 0 5%;
-}
-
-#Mobile {
-    margin: 10% 0 0 0;
-}
 </style>

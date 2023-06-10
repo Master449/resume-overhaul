@@ -6,23 +6,33 @@ html {
   box-sizing: border-box;
 }
 
-.container-fluid {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: #323b44;
   color: white;
   margin: 0;
 }
 
-#flex-wrapper {
-  display: inline-flex;
-  justify-content : space-evenly;
-}
-
 .card {
   background-color: #212529;
   color: white;
+}
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.flex-items:nth-child(1) {
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 5%;
 }
