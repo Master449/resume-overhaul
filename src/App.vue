@@ -40,4 +40,10 @@ import SideBar from './components/Sidebar.vue'
 .router-view {
     margin: 5%;
 }
+
+@media only screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
 </style>
