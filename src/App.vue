@@ -1,22 +1,10 @@
-<script lang="ts">
-export default {
-  data() {
-    return {
-      isMobile: true
-    }
-  },
-  mounted() {
-    this.isMobile = this.DeviceType()
-  },
-  methods: {
-    DeviceType() {
-      return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-    }
-  }
-}
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+  <div class="flex-container">
+  <div class="flexitems">
   <div id="mobile" v-if="isMobile">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -67,27 +55,16 @@ export default {
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">
-            <i class="fa-solid fa-house"></i> Home
-          </a>
+          <router-link to="/" class="nav-link"><i class="fa-solid fa-house"></i> Home</router-link>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
-            <i class="fa-solid fa-briefcase"></i>
-            Experience
-          </a>
+          <router-link to="/experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</router-link>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
-            <i class="fa-solid fa-school"></i>
-            Education
-          </a>
+          <router-link to="/education" class="nav-link"><i class="fa-solid fa-school"></i> Education</router-link>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
-            <i class="fa-brands fa-github"></i>
-            Projects
-          </a>
+          <router-link to="/projects" class="nav-link"><i class="fa-brands fa-github"></i> Projects</router-link>
         </li>
       </ul>
       <hr>
@@ -101,9 +78,53 @@ export default {
       </ul>
     </div>
   </div>
+</div>
+<div class="flexitems">
+  <RouterView />
+</div>
+</div>
 </template>
 
 <style>
+html {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #323b44;
+  color: white;
+  margin: 0;
+}
+
+.card {
+  background-color: #212529;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.flex-items:nth-child(1) {
+  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 5%;
+}
+
 #navbar {
   height: 100%;
   width: 100%;

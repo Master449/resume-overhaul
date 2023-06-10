@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-    name: 'Education',
+    name: 'my-education',
     props: {},
     data() {
         return {
@@ -50,7 +50,7 @@ export default {
     <div id="Non-Mobile" v-if="!isMobile">
         <h1>Education</h1>
         <hr />
-        <div class="card mb-4" v-for="school in Education">
+        <div class="card mb-4" v-for="(school, index) in Education" :key="index">
             <div class="row g-0">
                 <div class="col-md-2">
                     <img :src="school.logo" class="img-fluid rounded-start" :alt="school.name">
@@ -68,7 +68,7 @@ export default {
     <div id="Mobile" v-else>
         <h1>Education</h1>
         <hr />
-        <div class="card mb-4" v-for="school in Education">
+        <div class="card mb-4" v-for="(school, index) in Education" :key="index">
             <div class="row g-2">
                 <div class="col-md-2">
                     <img :src="school.logo" class="img-fluid rounded-start" :alt="school.name">
@@ -90,5 +90,9 @@ export default {
 hr {
     color: white;
     border: 2px solid white;
+}
+
+#Mobile {
+    margin-top: 20%;
 }
 </style>

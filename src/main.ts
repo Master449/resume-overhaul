@@ -1,16 +1,11 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import Main from './Main.vue'
-import Navbar from './components/Navbar.vue'
-import Education from './components/Education.vue'
+import App from './App.vue'
 import router from './router'
 
-const mainPage = createApp(Main)
-const navbar = createApp(Navbar)
-const edu = createApp(Education)
+const app = createApp(App)
 
-mainPage.use(router)
+app.use(router)
 
-navbar.mount('#nav')
-edu.mount('#content')
+app.mount('#app')
