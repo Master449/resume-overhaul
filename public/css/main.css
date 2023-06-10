@@ -16,26 +16,3 @@ body {
   background-color: #212529;
   color: white;
 }
-
-.flex-container {
-  display: flex;
-  height: 100vh;
-  flex-direction: row;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.flex-items:nth-child(1) {
-  flex: 1;
-  flex-grow: 0;
-  flex-shrink: 1;
-  position: sticky;
-}
-
-.flex-items:nth-child(2) {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  margin: 5%;
-}

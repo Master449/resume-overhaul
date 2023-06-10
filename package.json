@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "vue": "^3.3.2",
+    "vue-awesome-sidebar": "^1.2.3",
     "vue-router": "^4.2.0"
   },
   "devDependencies": {
