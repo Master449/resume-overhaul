@@ -21,12 +21,15 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: row;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .flex-items:nth-child(1) {
   flex: 1;
   flex-grow: 0;
   flex-shrink: 1;
+  position: sticky;
 }
 
 .flex-items:nth-child(2) {
