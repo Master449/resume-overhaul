@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Education from '../components/Education.vue'
+import Education from '../components/education-compo.vue'
 </script>
 
 <template>
-    <Education />
+    <Education></Education>
 </template>
