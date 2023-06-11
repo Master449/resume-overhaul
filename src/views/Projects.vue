@@ -1,9 +1,11 @@
+<script setup lang="ts">
+import Projects from '../components/projects-compo.vue'
+</script>
+
 <template>
-    <div class="about">
-      <h1>This is the projects page.</h1>
-    </div>
-  </template>
+   <Projects></Projects>
+</template>
   
-  <style>
-  </style>
+<style>
+</style>
   

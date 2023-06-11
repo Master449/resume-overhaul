@@ -39,6 +39,7 @@ import SideBar from './components/navbar-sidebar.vue'
     flex-shrink: 1;
     flex-basis: auto;
     height: 100vh;
+    margin: 5%;
 }
 
 .router-view {

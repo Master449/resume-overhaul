@@ -4,7 +4,6 @@ export default {
     props: {},
     data() {
         return {
-            isMobile: false,
             Education: [
                 {
                     logo: "/img/NIU.png",
@@ -32,22 +31,12 @@ export default {
                 }
             ]
         }
-    },
-    computed: {},
-    watch: {},
-    mounted() {
-        this.isMobile = this.DeviceType()
-    },
-    methods: {
-        DeviceType() {
-            return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-        }
     }
 }
 </script>
 
 <template>
-<div id="contain">
+<div id="container">
     <h1>Education</h1>
     <hr />
     <div class="card mb-4" v-for="(school, index) in Education" :key="index">
