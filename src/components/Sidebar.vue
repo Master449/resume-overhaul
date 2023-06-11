@@ -36,7 +36,7 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                 <li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii" class="stretched-link"><i
                             class="fa-brands fa-linkedin"></i></a></li>
             </ul>
-        </div>
+    </div>
     </div>
     <div class="Nav-Mobile" v-else>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -71,9 +71,10 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                                 Contact
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><li class="list-group-item"><a href="https://github.com/Master449" class="stretched-link"><i
+                            class="fa-brands fa-github"></i> GitHub</a></li></li>
+                                <li><li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii" class="stretched-link"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a></li></li>
                             </ul>
                         </li>
                     </ul>
@@ -87,20 +88,34 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 #navbar {
     height: 100%;
     width: 100%;
+    top: 0;
+    position: sticky;
 }
 
 #Nav-Not-Mobile {
     margin: 0;
     padding: 0;
     height: 100vh;
+    top: 0;
+    position: sticky;
 }
-
 #Nav-Not-Mobile .links li {
     border: none;
     width: 100%;
     background-color: #212529;
     text-align: center;
     font-size: 24px;
+}
+
+.dropdown-menu,
+.dropdown-menu li,
+.dropdown-menu li a {
+    background-color: #1F1F1F;
+    text-decoration: none;
+}
+
+.nav-link a {
+    color: #FFF;
 }
 
 ul li a {

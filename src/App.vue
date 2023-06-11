@@ -19,22 +19,26 @@ import SideBar from './components/Sidebar.vue'
 <style>
 .flex-container {
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: row;
+    margin-bottom: auto;
 }
 
 .flex-items:nth-child(1) {
     flex: 1;
+    top: 0;
     flex-grow: 0;
     flex-shrink: 1;
+    height: 100%;
+    top: 0;
     position: sticky;
 }
 
 .flex-items:nth-child(2) {
-    display: block;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
+    height: 100vh;
 }
 
 .router-view {
@@ -42,8 +46,8 @@ import SideBar from './components/Sidebar.vue'
 }
 
 @media only screen and (max-width: 600px) {
-  .flex-container {
-    flex-direction: column;
-  }
+    .flex-container {
+        flex-direction: column;
+    }
 }
 </style>

@@ -10,6 +10,7 @@ body {
   background-color: #323b44;
   color: white;
   margin: 0;
+  height: 100vh;
 }
 
 .card {
