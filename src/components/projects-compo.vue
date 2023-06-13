@@ -36,6 +36,11 @@ export default {
                     info: "Successfully ran a dummy FOG Server during my time at K.E.C. Ran a small student team of 12 other studens.",
                     skill: "Servers"
                 },
+                {
+                    name: "ResTech Hugo Website",
+                    info: "Researched and constructed a Hugo site to migrate all of our Knowledge Base articles to a more flexible platform.",
+                    skill: "Web Development"
+                },
             ]
         }
     }
@@ -97,6 +102,12 @@ hr {
     width: 100%;
     height: 15vw;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-fluid {
+    height: 35vh;
+  }
 }
 .flex-container {
     display: inline-flex;

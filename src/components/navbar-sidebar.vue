@@ -36,13 +36,13 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                 <li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii" class="stretched-link"><i
                             class="fa-brands fa-linkedin"></i></a></li>
             </ul>
-    </div>
+        </div>
     </div>
     <div class="Nav-Mobile" v-else>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                        <img src="/img/avatar.png" alt="" width="30" height="30"> David Flowers II
+                    <img src="/img/avatar.png" alt="" width="30" height="30"> David Flowers II
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,12 +71,12 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                                 Contact
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><li class="list-group-item"><a href="https://github.com/Master449" class="stretched-link"><i
-                            class="fa-brands fa-github"></i> GitHub</a></li></li>
-                                <li><li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii" class="stretched-link"><i
-                            class="fa-brands fa-linkedin"></i> LinkedIn</a></li></li>
-                            </ul>
-                        </li>
+                                <li class="list-group-item"><a href="https://github.com/Master449" class="stretched-link"><i
+                                            class="fa-brands fa-github"></i> GitHub</a></li>
+                        <li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii"
+                                class="stretched-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -99,6 +99,7 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
     top: 0;
     position: sticky;
 }
+
 #Nav-Not-Mobile .links li {
     border: none;
     width: 100%;
@@ -125,8 +126,11 @@ ul li a {
     font-size: 20px;
 }
 
+li {
+    border: none;
+}
+
 a,
 i {
     color: #FFF;
-}
-</style>
+}</style>

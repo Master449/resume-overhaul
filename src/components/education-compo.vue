@@ -46,7 +46,7 @@ export default {
             </div>
             <div class="col">
                 <div class="card-body">
-                    <h5 class="card-title"><strong>{{ school.name }} - {{ school.study }}</strong></h5>
+                    <h5 class="card-title display-6"><strong>{{ school.name }} - {{ school.study }}</strong></h5>
                     <p class="card-text">{{ school.start }} - {{ school.end }}</p>
                     <p class="card-text">{{ school.info }}</p>
                 </div>
@@ -70,5 +70,11 @@ hr {
 
 #contain {
     margin: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-fluid {
+    height: 35vh;
+  }
 }
 </style>
