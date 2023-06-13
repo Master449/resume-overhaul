@@ -108,6 +108,10 @@ hr {
   .img-fluid {
     height: 35vh;
   }
+
+  .btn-primary {
+    width: 100%;
+  }
 }
 .flex-container {
     display: inline-flex;
