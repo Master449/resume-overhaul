@@ -10,9 +10,11 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "typed.js": "^2.0.16",
     "vue": "^3.3.2",
     "vue-awesome-sidebar": "^1.2.3",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",

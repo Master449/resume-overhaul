@@ -10,7 +10,12 @@ export default {
 </script>
 
 <template>
-   <p>This is an imported component welcome page.</p>
+   <div class="container">
+    <div class="container">
+        <p id="main-header" class="display-3">Yeehaw</p>
+        <hr />
+    </div>
+   </div>
 </template>
 
 <style scoped>

@@ -4,26 +4,38 @@ export default {
         return {
             Projects: [
                 {
-                    picture: "https://picsum.photos/300/300/?blur=8",
+                    picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Portfolio / Resume Website",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis varius erat, in eleifend nisl maximus ac. Cras iaculis justo id faucibus ornare. Suspendisse sed rutrum sapien. Nunc felis quam, maximus ac dictum sit amet, auctor id orci. Cras aliquet libero at lorem eleifend, euismod iaculis dui venenatis. Aenean at sapien rhoncus odio condimentum pellentesque a fringilla orci. Nam vitae diam dapibus, lacinia ante non, varius urna. Morbi quis purus interdum, pellentesque diam non, hendrerit ligula. In vitae libero ac arcu semper cursus eget sed dui. Suspendisse eu eleifend ex, nec euismod est.",
-                    stack: ["Vue 3", "Vite", "TypeScript"],
-                    url: ""
+                    info: "This project is the one you are currently looking at! I learned what I used from several of my classes at NIU. This website was built using a Vite and Vue.js project. The main purpose was to really test what I can do without group members doing their part. Another purpose was to challenge myself towards Mobile Friendly design and the use of CSS FlexBoxes.",
+                    stack: ["Vue", "Vite", "TypeScript"],
+                    url: "https://github.com/Master449/resume-overhaul"
                 },
                 {
-                    picture: "https://picsum.photos/300/300/?blur=8",
+                    picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Rimjobs Automotive Store",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis varius erat, in eleifend nisl maximus ac. Cras iaculis justo id faucibus ornare. Suspendisse sed rutrum sapien. Nunc felis quam, maximus ac dictum sit amet, auctor id orci. Cras aliquet libero at lorem eleifend, euismod iaculis dui venenatis. Aenean at sapien rhoncus odio condimentum pellentesque a fringilla orci. Nam vitae diam dapibus, lacinia ante non, varius urna. Morbi quis purus interdum, pellentesque diam non, hendrerit ligula. In vitae libero ac arcu semper cursus eget sed dui. Suspendisse eu eleifend ex, nec euismod est",
-                    stack: ["Vue 3", "Bootstrap", "Express js", "SQLite3", "Linode"],
+                    info: "A Group Project for CSCI 467: Software Engineering. For this project we we're given a purpose; Ours being an Online Auto Parts Store. This project had a few constraints, like a legacy database that was read only, to a remote Credit Card Authorization System. Other than that we had total freedom. My responsibilities included: MySQL for our Database, Managing Linux users and groups on Linode, and API Endpoints for the product catalogue, and shopping cart.",
+                    stack: ["Vue", "Express js", "Bootstrap", "SCSS", "SQLite3", "Linode"],
                     url: "https://github.com/467Group3A/rimjobs"
                 },
                 {
-                    picture: "https://picsum.photos/300/300/?blur=8",
-                    name: "",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis varius erat, in eleifend nisl maximus ac. Cras iaculis justo id faucibus ornare. Suspendisse sed rutrum sapien. Nunc felis quam, maximus ac dictum sit amet, auctor id orci. Cras aliquet libero at lorem eleifend, euismod iaculis dui venenatis. Aenean at sapien rhoncus odio condimentum pellentesque a fringilla orci. Nam vitae diam dapibus, lacinia ante non, varius urna. Morbi quis purus interdum, pellentesque diam non, hendrerit ligula. In vitae libero ac arcu semper cursus eget sed dui. Suspendisse eu eleifend ex, nec euismod est",
-                    stack: [],
-                    url: ""
+                    picture: "https://picsum.photos/200/100/?blur=8",
+                    name: "Opossum Incremental",
+                    info: "I love opossums. So why not tread some waters into Game Development and persistence with a nice a simple game where you take care of a bunch of Virginia Opossums. They're just silly guys. Please be nicer to them.",
+                    stack: ["Vue"],
+                    url: "https://github.com/Master449/opossum-game"
                 }
+            ],
+            MinorProjects: [
+                {
+                    name: "Home Lab",
+                    info: "I currently run Proxmox for some home services. This includes a simple Web Server for development, and TrueNAS Scale.",
+                    skill: "Virtualization"
+                },
+                {
+                    name: "FOG Server",
+                    info: "Successfully ran a dummy FOG Server during my time at K.E.C. Ran a small student team of 12 other studens.",
+                    skill: "Servers"
+                },
             ]
         }
     }
@@ -31,8 +43,8 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h1>Projects</h1>
+    <div class="container-fluid">
+        <p class="display-3">Projects</p>
         <hr />
         <div class="card mb-4" v-for="proj in Projects">
             <div class="row g-0">
@@ -41,12 +53,26 @@ export default {
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ proj.name }}</h5>
+                        <h5 class="card-title display-6">{{ proj.name }}</h5>
                         <p class="card-text">{{ proj.info }}</p>
+                        <p><a :href="proj.url" class="btn btn-primary">GitHub Repository</a></p>
+                        <ul class="list-group list-group-horizontal">
+                            <div class="flex-container">
+                                <li class="list-group-item" v-for="tech in proj.stack"><strong>{{ tech }}</strong></li>
+                            </div>
+                        </ul>
                     </div>
-                    <ul>
-                        <li v-for="tech in proj.stack">{{ tech }}</li>
-                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="display-3">Minor Projects</p>
+        <hr />
+        <div class="flex-container">
+            <div class="card minor-projects" style="width: 18rem;" v-for="proj in MinorProjects">
+                <div class="card-body">
+                    <h5 class="card-title">{{ proj.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted"> {{ proj.skill }} </h6>
+                    <p class="card-text">{{ proj.info }}</p>
                 </div>
             </div>
         </div>
@@ -59,7 +85,40 @@ hr {
     border: 2px solid white;
 }
 
+.minor-projects {
+    margin: 10px;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.flex-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    width: 100%;
+}
+
 .card {
+    width: 100%;
+}
+
+.list-group-item {
+    background-color: #2d3338;
+    color: white;
+    margin-right: 20px;
+}
+
+.container {
     width: 100%;
 }
 </style>

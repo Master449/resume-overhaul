@@ -27,7 +27,7 @@ export default {
                     study: "Technical Training",
                     start: "August 2016",
                     end: "May 2018",
-                    info: "Pursuing a Bachelor of Science in Computer Science, with a focus on Software. Developing hands-on experience in software development, data structures and algorithms, databases, and computer architecture. Building a strong foundation in computational thinking and problem-solving skills, and preparing to apply technical knowledge to real-world challenges and create innovative solutions upon graduation."
+                    info: "Dual Credit Course I attended Junior and Senior year of High school. First years emphasis was on Computer Repair, Troubleshooting, and HelpDesk-esque Customer Service. Second year was about Web Development Fundamentals. This is where I began the dive into HTML, CSS, and JavaScript."
                 }
             ]
         }
@@ -37,7 +37,7 @@ export default {
 
 <template>
 <div id="container">
-    <h1>Education</h1>
+    <p class="display-3">Education</p>
     <hr />
     <div class="card mb-4" v-for="(school, index) in Education" :key="index">
         <div class="row g-0">
@@ -60,6 +60,12 @@ export default {
 hr {
     color: white;
     border: 2px solid white;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
 #contain {

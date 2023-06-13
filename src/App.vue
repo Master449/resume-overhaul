@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import SideBar from './components/navbar-sidebar.vue'
+import VueTypedJs from 'vue-typed-js'
 </script>
 
 <template>
@@ -39,7 +40,6 @@ import SideBar from './components/navbar-sidebar.vue'
     flex-shrink: 1;
     flex-basis: auto;
     height: 100vh;
-    margin: 5%;
 }
 
 .router-view {
