@@ -1,7 +1,5 @@
 <script lang="ts">
 export default {
-    name: 'my-education',
-    props: {},
     data() {
         return {
             Education: [
