@@ -5,10 +5,10 @@ import SideBar from './components/navbar-sidebar.vue'
 
 <template>
     <div class="flex-container">
-        <div class="flexitems">
+        <div id="navbar">
             <SideBar />
         </div>
-        <div class="flexitems">
+        <div id="content">
             <div class="router-view">
                 <RouterView />
             </div>
@@ -16,29 +16,30 @@ import SideBar from './components/navbar-sidebar.vue'
     </div>
 </template>
 
-<style>
+<style scoped>
 .flex-container {
     display: flex;
     height: 100%;
     flex-direction: row;
     margin-bottom: auto;
+    width: 100%;
 }
 
-.flex-items:nth-child(1) {
+#navbar {
     flex: 1;
-    top: 0;
     flex-grow: 0;
+    top: 0;
     flex-shrink: 1;
-    height: 100%;
     top: 0;
     position: sticky;
+    z-index: 2;
 }
 
-.flex-items:nth-child(2) {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
+#content {
     height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .router-view {
