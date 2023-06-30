@@ -1,4 +1,6 @@
 <script lang="ts">
+import { Transition } from 'vue';
+
 export default {
     data() {
         return {
@@ -9,19 +11,40 @@ export default {
 </script>
 
 <template>
-        <p class="display-3">David Flowers II</p>
-        <p class="display-6">Full-Stack Developer</p>
+    <p class="display-3">David Flowers II</p>
+    <p class="display-6">Full-Stack Developer</p>
+    <hr />
+    <Transition appear>
+        <div class="flex-container">
+            <div class="flex-items" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                <i class="fa-solid fa-code-branch"></i>
+                <p class="skills">C++, Python, PHP, JS</p>
+            </div>
+            <div class="flex-items">
+                <i class="fa-solid fa-database"></i>
+                <p class="skills">SQL, MariaDB, SQLite3</p>
+            </div>
+            <div class="flex-items">
+                <i class="fa-solid fa-terminal"></i>
+                <p class="skills">Linux, PowerShell, Git</p>
+            </div>
+            <div class="flex-items">
+                <i class="fa-solid fa-desktop"></i>
+                <p class="skills">Computer Repair</p>
+            </div>
+            <div class="flex-items">
+                <i class="fa-solid fa-pen-nib"></i>
+                <p class="skills">Adobe and Microsoft Office</p>
+            </div>
+            <div class="flex-items">
+                <i class="fa-solid fa-user"></i>
+                <p class="skills">7+ Years Customer Service</p>
+            </div>
+        </div>
+    </Transition>
 
-        <ul>
-            <li class="icon solid fa-code-branch">C++, Python, PHP, JS</li>
-            <li class="icon solid fa-database">SQL, MariaDB, PDO</li>
-            <li class="icon solid fa-desktop">Computer Diagnostic and Repair</li>
-            <li class="icon solid fa-terminal">Linux, PowerShell, Git</li>
-            <li class="icon solid fa-object-group">Adobe Suite</li>
-            <li class="icon solid fa-file-word">Microsoft Suite</li>
-            <li class="icon solid fa-users">6+ Years of Customer Service</li>
-            <li class="icon solid fa-memory">10+ Years of Computer Hardware</li>
-        </ul>
+    <ul>
+    </ul>
 </template>
 
 <style scoped>
@@ -31,25 +54,21 @@ hr {
     width: 100%;
 }
 
-.img-fluid {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+i {
+    font-size: 2.25em;
+    color: white;
+    float: left;
+    padding: 5%;
+    margin: 0 5% 0 0;
+    vertical-align: middle;
+    background-color: #212529;
+    border-radius: 25px;
 }
 
-@media only screen and (max-width: 600px) {
-    .img-fluid {
-        height: 35vh;
-    }
-}
-
-.container {
+.skills {
+    font-size: 1.5em;
+    color: white;
     margin: 5%;
-    width: 100%;
-}
-
-p {
-    width: 100%;
 }
 
 .display-1,
@@ -59,5 +78,42 @@ p {
 .display-5,
 .display-6 {
     text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.flex-items {
+    padding: 0 2%;
+    width: 25%;
+    display: block;
+    flex-basis: calc(100% / 3);
+    align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .flex-items {
+        flex-basis: calc(100% / 2);
+    }
+}
+
+.v-enter-from {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.v-enter-active {
+    transition: all 0.5s ease;
+}
+
+.v-leave-to {
+    opacity: 0;
+    transform: translateY(0);
 }
 </style>

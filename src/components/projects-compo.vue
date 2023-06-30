@@ -13,7 +13,7 @@ export default {
                 {
                     picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Rimjobs Automotive Store",
-                    info: "A Group Project for CSCI 467: Software Engineering. For this project we we're given a purpose; Ours being an Online Auto Parts Store. This project had a few constraints, like a legacy database that was read only, to a remote Credit Card Authorization System. Other than that we had total freedom. My responsibilities included: MySQL for our Database, Managing Linux users and groups on Linode, and API Endpoints for the product catalogue, and shopping cart.",
+                    info: "A Group Project for CSCI 467: Software Engineering. For this project we we're given a purpose; Ours being an Online Auto Parts Store. This project had a few constraints, like a legacy database that was read only, to a remote Credit Card Authorization System. Other than that we had total freedom. My responsibilities included: MySQL for our Database, Managing Linux users and groups on Linode, and API Endpoints for the product catalogue, and shopping cart. The name was a joke that stuck. The name came from the Saints Row franchise.",
                     stack: ["Vue", "Express js", "Bootstrap", "SCSS", "SQLite3", "Linode"],
                     url: "https://github.com/467Group3A/rimjobs"
                 },
