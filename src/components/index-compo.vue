@@ -87,6 +87,7 @@ i {
     justify-content: center;
     align-items: stretch;
     align-content: stretch;
+    width: 50%;
 }
 
 .flex-items {
