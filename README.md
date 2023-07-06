@@ -8,6 +8,7 @@ Some keys things I wanted to learn while making this website:
 
 - Flexboxes and how they interact
 - Mobile friendly web design
+- API Fetching of GitHub Descriptions?
 
 ## Customize configuration
 
