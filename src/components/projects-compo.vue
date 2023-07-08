@@ -6,7 +6,7 @@ export default {
                 {
                     picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Portfolio / Resume Website",
-                    info: "This project is the one you are currently looking at! I learned what I used from several of my classes at NIU. This website was built using a Vite and Vue.js project. The main purpose was to really test what I can do without group members doing their part. Another purpose was to challenge myself towards Mobile Friendly design and the use of CSS FlexBoxes.",
+                    info: "",
                     stack: ["Vue", "Vite", "TypeScript"],
                     url: "https://github.com/Master449/resume-overhaul"
                 },
@@ -43,6 +43,14 @@ export default {
                 },
             ]
         }
+    },
+    mounted() {
+
+    },
+    created() {
+    fetch("https://raw.githubusercontent.com/master449/resume-overhaul/dev/README.md")
+        .then(response => response.text())
+        .then(data => (this.Projects[0].info = data));
     }
 }
 </script>
