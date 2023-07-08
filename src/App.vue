@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import SideBar from './components/navbar-sidebar.vue'
+import { Transition } from 'vue';
 </script>
 
 <template>
@@ -8,10 +9,14 @@ import SideBar from './components/navbar-sidebar.vue'
         <div id="navbar">
             <SideBar />
         </div>
-        <div id="content">
-            <div class="router-view">
-                <RouterView />
-            </div>
+        <div class="router-view">
+            <router-view v-slot="{ Component, route }">
+                <Transition name="fade" mode="out-in">
+                    <div :key="route.name">
+                        <component :is="Component"></component>
+                    </div>
+                </Transition>
+            </router-view>
         </div>
     </div>
 </template>
@@ -35,15 +40,9 @@ import SideBar from './components/navbar-sidebar.vue'
     z-index: 2;
 }
 
-#content {
-    height: 100vh;
-    overflow: scroll;
-    overflow-x: hidden;
-    width: 100%;
-}
-
 .router-view {
     margin: 5%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -55,34 +54,26 @@ import SideBar from './components/navbar-sidebar.vue'
 [v-cloak] {
     display: block;
     padding: 50px 0;
-  }
-  
-  @keyframes spinner {
+}
+
+@keyframes spinner {
     to {
         transform: rotate(360deg);
     }
-  }
-  
-  [v-cloak]:before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    border-top-color: #333;
-    animation: spinner 0.6s linear infinite;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
-  [v-cloak]>* {
+}
+
+[v-cloak]>* {
     display: none;
-  }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
 </style>

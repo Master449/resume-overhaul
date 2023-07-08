@@ -11,40 +11,37 @@ export default {
 </script>
 
 <template>
-    <p class="display-3">David Flowers II</p>
+    <div class="container">
+        <p class="display-3">David Flowers II</p>
     <p class="display-6">Full-Stack Developer</p>
     <hr />
-    <Transition appear>
-        <div class="parent">
-            <div>
-                <i class="fa-solid fa-code-branch"></i>
-                <p class="skills">C++, Python, PHP, JS</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-database"></i>
-                <p class="skills">SQL, MariaDB, SQLite3</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-terminal"></i>
-                <p class="skills">Linux, PowerShell, Git</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-desktop"></i>
-                <p class="skills">Computer Repair</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-pen-nib"></i>
-                <p class="skills">Adobe and Microsoft Office</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-user"></i>
-                <p class="skills">7+ Years Customer Service</p>
-            </div>
+    <div class="parent">
+        <div>
+            <i class="fa-solid fa-code-branch"></i>
+            <p class="skills">C++, Python, PHP, JS</p>
         </div>
-    </Transition>
-
-    <ul>
-    </ul>
+        <div>
+            <i class="fa-solid fa-database"></i>
+            <p class="skills">SQL, MariaDB, SQLite3</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-terminal"></i>
+            <p class="skills">Linux, PowerShell, Git</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-desktop"></i>
+            <p class="skills">Computer Repair</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-pen-nib"></i>
+            <p class="skills">Adobe and Microsoft Office</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <p class="skills">7+ Years Customer Service</p>
+        </div>
+    </div>
+    </div>
 </template>
 
 <style scoped>
@@ -78,6 +75,7 @@ i {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin: 2% 0;
+    width: 100%;
 }
 
 .display-1,
@@ -118,6 +116,7 @@ i {
         grid-template-rows: repeat(6, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
+        width: 100%;
     }
 
     i {
@@ -136,19 +135,5 @@ i {
         color: white;
         margin: 5%;
     }
-}
-
-.v-enter-from {
-    opacity: 0;
-    transform: translateY(100%);
-}
-
-.v-enter-active {
-    transition: all 0.5s ease;
-}
-
-.v-leave-to {
-    opacity: 0;
-    transform: translateY(0);
 }
 </style>
