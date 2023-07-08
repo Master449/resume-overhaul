@@ -49,6 +49,10 @@ import { Transition } from 'vue';
     .flex-container {
         flex-direction: column;
     }
+
+    .router-view {
+        width: 90%;
+    }
 }
 
 [v-cloak] {

@@ -73,10 +73,12 @@ let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li class="list-group-item"><a href="https://github.com/Master449" class="stretched-link"><i
                                             class="fa-brands fa-github"></i> GitHub</a></li>
-                        <li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii"
-                                class="stretched-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-                    </ul>
-                    </li>
+                                <li class="list-group-item"><a href="https://www.linkedin.com/in/dflowersii"
+                                        class="stretched-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                                <li class="list-group-item"><a href="mailto:dsflowers2000@gmail.com"
+                                        class="stretched-link"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
