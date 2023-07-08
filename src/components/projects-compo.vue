@@ -6,7 +6,7 @@ export default {
                 {
                     picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Portfolio / Resume Website",
-                    info: "",
+                    info: "This project is the one you are currently looking at! ",
                     stack: ["Vue", "Vite", "TypeScript"],
                     url: "https://github.com/Master449/resume-overhaul"
                 },
@@ -50,7 +50,7 @@ export default {
     created() {
     fetch("https://raw.githubusercontent.com/master449/resume-overhaul/dev/README.md")
         .then(response => response.text())
-        .then(data => (this.Projects[0].info = data));
+        .then(data => (this.Projects[0].info += data));
     }
 }
 </script>
