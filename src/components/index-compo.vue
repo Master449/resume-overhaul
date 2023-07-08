@@ -15,28 +15,28 @@ export default {
     <p class="display-6">Full-Stack Developer</p>
     <hr />
     <Transition appear>
-        <div class="flex-container">
-            <div class="flex-items" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+        <div class="parent">
+            <div>
                 <i class="fa-solid fa-code-branch"></i>
                 <p class="skills">C++, Python, PHP, JS</p>
             </div>
-            <div class="flex-items">
+            <div>
                 <i class="fa-solid fa-database"></i>
                 <p class="skills">SQL, MariaDB, SQLite3</p>
             </div>
-            <div class="flex-items">
+            <div>
                 <i class="fa-solid fa-terminal"></i>
                 <p class="skills">Linux, PowerShell, Git</p>
             </div>
-            <div class="flex-items">
+            <div>
                 <i class="fa-solid fa-desktop"></i>
                 <p class="skills">Computer Repair</p>
             </div>
-            <div class="flex-items">
+            <div>
                 <i class="fa-solid fa-pen-nib"></i>
                 <p class="skills">Adobe and Microsoft Office</p>
             </div>
-            <div class="flex-items">
+            <div>
                 <i class="fa-solid fa-user"></i>
                 <p class="skills">7+ Years Customer Service</p>
             </div>
@@ -71,6 +71,15 @@ i {
     margin: 5%;
 }
 
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 2% 0;
+}
+
 .display-1,
 .display-2,
 .display-3,
@@ -101,6 +110,31 @@ i {
 @media only screen and (max-width: 600px) {
     .flex-items {
         flex-basis: calc(100% / 2);
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    i {
+        font-size: 1.75em;
+        color: white;
+        float: left;
+        padding: 5%;
+        margin: 0 5% 0 0;
+        vertical-align: middle;
+        background-color: #212529;
+        border-radius: 25px;
+    }
+
+    .skills {
+        font-size: 1.2em;
+        color: white;
+        margin: 5%;
     }
 }
 

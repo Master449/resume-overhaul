@@ -20,7 +20,7 @@ export default {
                 {
                     picture: "https://picsum.photos/200/100/?blur=8",
                     name: "Opossum Incremental",
-                    info: "I love opossums. So why not tread some waters into Game Development and persistence with a nice a simple game where you take care of a bunch of Virginia Opossums. They're just silly guys. Please be nicer to them.",
+                    info: "",
                     stack: ["Vue"],
                     url: "https://github.com/Master449/opossum-game"
                 }
@@ -28,7 +28,7 @@ export default {
             MinorProjects: [
                 {
                     name: "Home Lab",
-                    info: "I currently run Proxmox for some home services. This includes a simple Web Server for development, and TrueNAS Scale.",
+                    info: "I currently run Proxmox for some home services. This includes a simple Web Server for development, TrueNAS Scale, and Plex Media Server.",
                     skill: "Virtualization"
                 },
                 {
@@ -41,6 +41,11 @@ export default {
                     info: "Researched and constructed a Hugo site to migrate all of our Knowledge Base articles to a more flexible platform.",
                     skill: "Web Development"
                 },
+                {
+                    name: "PCIe Passthrough",
+                    info: "I daily drive Linux, but I still enjoy Video Games. I run a virtualized Windows 10, with GPU and NVMe PCIe passthrough to achieve both. Got MacOS Working as well (through Ventura)",
+                    skill: "Virtualization"
+                },
             ]
         }
     },
@@ -48,9 +53,12 @@ export default {
 
     },
     created() {
-    fetch("https://raw.githubusercontent.com/master449/resume-overhaul/dev/README.md")
+        fetch("https://raw.githubusercontent.com/master449/resume-overhaul/dev/README.md")
         .then(response => response.text())
         .then(data => (this.Projects[0].info += data));
+        fetch("https://raw.githubusercontent.com/master449/opossum-game/main/README.md")
+        .then(response => response.text())
+        .then(data => (this.Projects[2].info += data));
     }
 }
 </script>
