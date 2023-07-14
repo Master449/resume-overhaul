@@ -4,7 +4,7 @@ export default {
         return {
             Experience: [
                 {
-                    logo: "/img/NIU.png",
+                    logo: "/img/ResTech.png",
                     name: "Northern Illinois University",
                     title: "ResTech Computer Technician",
                     start: "May 2022",
@@ -59,6 +59,10 @@ export default {
 hr {
     color: white;
     border: 2px solid white;
+}
+
+img {
+    background-color: white;
 }
 
 .img-fluid {
