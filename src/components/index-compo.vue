@@ -226,11 +226,15 @@ h1 {
         grid-template-columns: 1fr;
     }
 
+    .parent-major i {
+        font-size: 1.75em;
+    }
+
     .major-container {
         width: 100%;
     }
 
-    i {
+    .parent i {
         font-size: 1.75em;
         color: white;
         float: left;
@@ -239,6 +243,8 @@ h1 {
         vertical-align: middle;
         background-color: #212529;
         border-radius: 25px;
+        vertical-align: middle;
+        align-content: center;
     }
 
     .skills {
