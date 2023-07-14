@@ -9,7 +9,8 @@ export default {
                     study: "Bachelors of Computer Science",
                     start: "August 2021",
                     end: "Present",
-                    info: "Pursuing a Bachelor of Science in Computer Science, with a focus on Software Engineering. Developing hands-on experience in software development, data structures and algorithms, databases, and computer architecture. Building a strong foundation in computational thinking and problem-solving skills, and preparing to apply technical knowledge to real-world challenges and create innovative solutions."
+                    info: "Pursuing a Bachelor of Science in Computer Science, with a focus on Software Engineering. Developing hands-on experience in software development, data structures and algorithms, databases, and computer architecture. Building a strong foundation in computational thinking and problem-solving skills, and preparing to apply technical knowledge to real-world challenges and create innovative solutions.",
+                    programURL: "https://www.cs.niu.edu"
                 },
                 {
                     logo: "/img/Kishwaukee.png",
@@ -17,7 +18,8 @@ export default {
                     study: "Associates of Science",
                     start: "August 2018",
                     end: "May 2021",
-                    info: "Fulfilled general education requirements while also cultivating a passion for programming. This period marked a turning point in my journey towards becoming a skilled developer, laying the foundation for further learning and growth in the field."
+                    info: "Fulfilled general education requirements while also cultivating a passion for programming. This period marked a turning point in my journey towards becoming a skilled developer, laying the foundation for further learning and growth in the field.",
+                    programURL: "https://kish.edu/academics/programs/associate-in-science.php"
                 },
                 {
                     logo: "/img/KEC.png",
@@ -25,7 +27,8 @@ export default {
                     study: "Technical Training",
                     start: "August 2016",
                     end: "May 2018",
-                    info: "Dual Credit Course I attended Junior and Senior year of High school. First years emphasis was on Computer Repair, Troubleshooting, and Help Desk-esque Customer Service. Second year was about Web Development Fundamentals. This is where I began the dive into HTML, CSS, and JavaScript."
+                    info: "Dual Credit Course I attended Junior and Senior year of High school. First years emphasis was on Computer Repair, Troubleshooting, and Help Desk-esque Customer Service. Second year was about Web Development Fundamentals. This is where I began the dive into HTML, CSS, and JavaScript.",
+                    programURL: "https://kecprograms.com/Career-Tech-Ed/Career--Tech-Classes/CIS--Computer-Programming/index.html"
                 }
             ]
         }
@@ -47,6 +50,7 @@ export default {
                     <h5 class="card-title display-6"><strong>{{ school.name }} - {{ school.study }}</strong></h5>
                     <p class="card-text">{{ school.start }} - {{ school.end }}</p>
                     <p class="card-text">{{ school.info }}</p>
+                    <p><a :href="school.programURL" class="btn">Program Overview</a></p>
                 </div>
             </div>
         </div>
@@ -58,6 +62,11 @@ export default {
 hr {
     color: white;
     border: 2px solid white;
+}
+
+.btn {
+    color: white;
+    border-color: white;
 }
 
 .img-fluid {
