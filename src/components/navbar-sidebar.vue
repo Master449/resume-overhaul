@@ -1,12 +1,18 @@
-<script setup lang="ts">
+<script lang="ts">
+import { onMounted } from 'vue';
 import { RouterLink } from 'vue-router'
 
-let IsMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-
+export default {
+    data() {
+        return {
+            isMobile: screen.width < 600
+        }
+    }
+}
 </script>
 
 <template>
-    <div id="Nav-Not-Mobile" v-if=(!IsMobile)>
+    <div id="Nav-Not-Mobile" v-if=(!isMobile)>
         <div id="navbar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
             <img src="/img/avatar.png" />
             <hr>

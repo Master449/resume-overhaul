@@ -25,7 +25,7 @@ export default {
                     study: "Technical Training",
                     start: "August 2016",
                     end: "May 2018",
-                    info: "Dual Credit Course I attended Junior and Senior year of High school. First years emphasis was on Computer Repair, Troubleshooting, and HelpDesk-esque Customer Service. Second year was about Web Development Fundamentals. This is where I began the dive into HTML, CSS, and JavaScript."
+                    info: "Dual Credit Course I attended Junior and Senior year of High school. First years emphasis was on Computer Repair, Troubleshooting, and Help Desk-esque Customer Service. Second year was about Web Development Fundamentals. This is where I began the dive into HTML, CSS, and JavaScript."
                 }
             ]
         }

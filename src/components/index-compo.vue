@@ -196,6 +196,15 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
+    .display-2 {
+        white-space: nowrap;
+    }
+
+    .content {
+        text-align: left;
+        font-size: 12pt;
+    }
+
     .flex-items {
         flex-basis: calc(100% / 2);
     }
@@ -206,6 +215,14 @@ h1 {
         grid-template-rows: repeat(6, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
+        width: 100%;
+    }
+
+    .parent-major {
+        grid-template-columns: 1fr;
+    }
+
+    .major-container {
         width: 100%;
     }
 
