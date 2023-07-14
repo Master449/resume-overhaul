@@ -17,7 +17,7 @@ export default {
                     title: "Junior Scan Coordinator",
                     start: "January 2021",
                     end: "May 2022",
-                    info: "Experienced Scan Coordinator with expertise in efficiently managing high-volume scanning projects using technical software and equipment. Strong organizational, communication and collaboration skills with a proven ability to handle confidential information."
+                    info: "Experienced Scan Coordinator with expertise in efficiently managing high-volume scanning projects. Proficient in technical software and equipment. Strong organizational, communication, and collaboration skills. Additional responsibilities include night shift coordination and supporting stockers."
                 },
                 {
                     logo: "/img/Jewel-Osco.png",

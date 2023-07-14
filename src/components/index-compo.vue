@@ -200,6 +200,10 @@ h1 {
         white-space: nowrap;
     }
 
+    .container {
+        width: 100%;
+    }
+
     .content {
         text-align: left;
         font-size: 12pt;
